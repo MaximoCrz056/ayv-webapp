@@ -1,0 +1,192 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+const metadata = {
+  title: 'Activate y Vive!',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'secondary',
+        text: 'Comienza hoy',
+        href: '/iniciar-sesion',
+        target: '_blank',
+        icon: 'tabler:login',
+      },
+      { text: 'Ver más', href: '#features' },
+    ]}
+    image={{ src: 'https://images.pexels.com/photos/949131/pexels-photo-949131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', alt: 'banner' }}
+  >
+    <Fragment slot="title">
+      Bienvenido a<span class="hidden xl:inline"> Activate y Vive</span>
+      <span class="text-green-400 dark:text-white highlight"></span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Descubre una vida saludable</span> con nuestra guía completa para ejercitarte de manera
+        efectiva y mantener un estilo de vida activo.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+  id="features"
+  tagline="Características"
+  title="Lo más importante para una vida saludable con ejercicio"
+  subtitle="Cuando te dispones a mejorar tu salud a través del ejercicio, es crucial tener la información y las herramientas adecuadas para alcanzar tus metas."
+  items={[
+    {
+      title: 'Importancia del ejercicio para la salud',
+      description:
+        'Entender por qué el ejercicio es crucial para mantener una vida saludable física y mentalmente te motiva a mantener una rutina regular.',
+      icon: 'tabler:brand-tailwind',
+    },
+    {
+      title: 'Componentes diseñados para salud y ejercicio',
+      description:
+        'Widgets diseñados con Tailwind CSS específicamente para sitios web de salud, blogs personales, perfiles profesionales y más.',
+      icon: 'tabler:components',
+    },
+    {
+      title: 'Prácticas recomendadas para una vida activa',
+      description:
+        'Crear hábitos de ejercicio seguro, eficiente y amigable con el usuario que proporcionen experiencias excepcionales y un bienestar duradero.',
+      icon: 'tabler:list-check',
+    },
+    {
+      title: 'Velocidad de carga óptima para una experiencia sin interrupciones',
+      description:
+        'Una buena velocidad de carga de páginas impacta positivamente la experiencia del usuario, mejorando la motivación y la adherencia a un estilo de vida activo.',
+      icon: 'tabler:rocket',
+    },
+    {
+      title: 'Optimización para motores de búsqueda y visibilidad online',
+      description:
+        'El SEO adecuado garantiza que tu contenido sobre salud y ejercicio llegue a tu audiencia objetivo, promoviendo hábitos saludables y mejorando la calidad de vida.',
+      icon: 'tabler:arrows-right-left',
+    },
+    {
+      title: 'Innovación y colaboración en la comunidad de salud',
+      description:
+        'Fomentar una cultura de innovación y colaboración en la comunidad de salud y ejercicio es esencial para ofrecer nuevas ideas y mejorar continuamente la experiencia del usuario.',
+      icon: 'tabler:bulb',
+    },
+  ]}
+/>
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Dentro del programa"
+    title="Diseño moderno: Para un estilo de vida activo!"
+    items={[
+      {
+        title: 'Ejercicios desde cero',
+        description:
+          'Comienza con ejercicios pequeños y poco demandantes para que puedas comenzar a hacer ejercicios de forma regular.',
+      },
+      {
+        title: 'Se adapta a ti',
+        description:
+          'Segun tus resultados, recomendaremos ejercicios cada vez mas avanzados para que puedas tener un mejor resultado.',
+      },
+    ]}
+    image={{
+      src: 'https://images.pexels.com/photos/4164509/pexels-photo-4164509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Construyendo una mejor experiencia
+      </h3>
+      Tener resultados ayudara a sobresalir.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+  title="Consigue tu rutina de ejercicio perfecta en poco tiempo con estos pasos."
+  items={[
+    {
+      title: 'Paso 1: <span class="font-medium">Evaluar tu nivel de condición física</span>',
+      description:
+        'Es fundamental conocer tu punto de partida. Realiza una evaluación física para entender tus capacidades y limitaciones antes de comenzar una nueva rutina de ejercicios.',
+      icon: 'tabler:package',
+    },
+    {
+      title: 'Paso 2: <span class="font-medium">Establecer metas claras</span>',
+      description:
+        'Define tus objetivos de ejercicio. Ya sea perder peso, ganar músculo o mejorar tu resistencia, tener metas claras te ayudará a mantenerte enfocado y motivado.',
+      icon: 'tabler:letter-case',
+    },
+    {
+      title: 'Paso 3: <span class="font-medium">Crear un plan de ejercicios</span>',
+      description:
+        'Diseña un plan de ejercicios que se adapte a tus metas y nivel de condición física. Incluye una variedad de ejercicios cardiovasculares, de fuerza y flexibilidad para un entrenamiento equilibrado.',
+      icon: 'tabler:paint',
+    },
+    {
+      title: 'Paso 4: <span class="font-medium">Mantener la consistencia</span>',
+      description:
+        'La clave del éxito en cualquier programa de ejercicios es la consistencia. Asegúrate de seguir tu plan regularmente y ajustarlo según sea necesario para continuar progresando.',
+      icon: 'tabler:check',
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+    alt: 'Imagen de pasos para una rutina de ejercicio',
+  }}
+/>
+
+
+<!-- BlogLatestPosts Widget ********* -->
+
+<BlogLatestPosts
+  title="Descubre más contenido en nuestro Blog"
+  information={`Nuestro blog se dedica a proporcionarte información valiosa sobre ejercicio y vida saludable.
+                      Cada nuevo artículo te ayudará a entender mejor cómo mantener un estilo de vida activo y saludable,
+                      desde rutinas de ejercicio efectivas hasta consejos de nutrición. ¡Explora y aprende más sobre cómo llevar una vida más saludable!
+              `}
+/>
+
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Estrellas', amount: '24.8K' },
+      { title: 'Usuarios', amount: '48.4K' },
+    ]}
+  />
+</Layout>

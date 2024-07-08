@@ -1,0 +1,135 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Videos',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Videos"
+    title="Eleva tus capacidades físicas desde casa"
+    subtitle="Conoce nuestra meticulosa colección de videos para ayudarte a alcanzar tus metas de salud y fitness."
+    actions={[{ variant: 'secondary', text: 'Comienza a explorar', href: '#features2' }]}
+    image={{
+      src: 'https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      alt: 'AstroWind Hero Image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2 id='features2'
+    title="Explora nuestra diversa colección de videos"
+    subtitle="No hay excusas para no empezar. Encuentra el video perfecto para ti."
+    columns={3}
+    items={[
+      {
+        title: 'Saber qué hacer y cómo',
+        description:
+          'Nuestros videos detallados te guiarán paso a paso en cada ejercicio, asegurándote que lo hagas correctamente y de manera segura.',
+        
+      } ,
+      {
+        title: 'Ejercicios en casa',
+        description:
+          'Rutinas diseñadas para espacios pequeños, sin necesidad de equipo. Perfecto para mantenerte en forma sin salir de casa.',
+      },
+      {
+        title: 'Entrenamientos de gimnasio',
+        description: `Videos para maximizar tu tiempo en el gimnasio, con entrenamientos específicos para diferentes objetivos como fuerza, resistencia y flexibilidad.`,
+        
+      },
+    ]}
+  />
+
+  <section id="videos" class="py-12 bg-gray-50 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-8">Nuestros Videos</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div class="aspect-w-16 aspect-h-9 sm:aspect-h-9">
+          <iframe 
+            class="w-full h-80"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="aspect-w-16 aspect-h-9 sm:aspect-h-9">
+          <iframe 
+            class="w-full h-80"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="aspect-w-16 aspect-h-9 sm:aspect-h-9">
+          <iframe 
+            class="w-full h-80"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="aspect-w-16 aspect-h-9 sm:aspect-h-9">
+          <iframe 
+            class="w-full h-80"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Opiniones de nuestros usuarios"
+    testimonials={[
+      {
+        testimonial: `Los videos son no solo visualmente atractivos sino también muy profesionales. Me han ahorrado mucho tiempo y me han ayudado a hacer una impresión duradera en mi bienestar.`,
+        name: 'Emily Kennedy',
+        job: 'Desarrolladora front-end',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Emily Kennedy Image',
+        },
+      },
+      {
+        testimonial: `El diseño del sitio muestra mi trabajo bellamente, con un diseño limpio y elegante que permite que mis rutinas brillen. La personalización fue muy sencilla, incluso para alguien sin conocimientos técnicos. El resultado es un portafolio profesional que ha recibido numerosos elogios.`,
+        name: 'Sarah Hansen',
+        job: 'Fotógrafa',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sarah Hansen Image',
+        },
+      },
+      {
+        testimonial: `Descubrí estos videos y estoy impresionado por su variedad y calidad. Me han ayudado a establecer una rutina consistente y a mejorar mi salud general.`,
+        name: 'Mark Wilkinson',
+        job: 'Propietario de pequeño negocio',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+    ]}
+  />
+</Layout>
